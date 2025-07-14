@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Situação dos Correios</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: <%= greve ? "#ffe5e5" : "#e5ffe5" %>;
+      color: <%= greve ? "#c00" : "#090" %>;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3em;
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    <% if (greve) { %>
+      🚫 Os Correios estão em greve.
+    <% } else { %>
+      ✅ Os Correios estão funcionando normalmente.
+    <% } %>
+  </h1>
+</body>
+</html>

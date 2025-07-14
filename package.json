@@ -10,7 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.10.0",
+    "cheerio": "^1.1.0",
     "ejs": "^3.1.10",
-    "express.js": "^1.0.0"
+    "express.js": "^1.0.0",
+    "puppeteer": "^24.12.1"
   }
 }

@@ -1,2 +1,3 @@
-# greve
- isso vai verificar automaticamente se os correios estao em greve ideal pra quem importa
+Site que verifica os status dos correios, e mostra as ultimas atualizacoes
+
+V2- atualizacao: agora está em react

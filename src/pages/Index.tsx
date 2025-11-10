@@ -3,11 +3,18 @@ import UpdatesTimeline from "@/components/UpdatesTimeline";
 import ImpactInfo from "@/components/ImpactInfo";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
+import { formatInTimeZone } from "date-fns-tz";
+import { ptBR } from "date-fns/locale";
 
 const Index = () => {
   // Dados mockados - em produção viriam de uma API
   const currentStatus: "operational" | "strike" | "partial" = "partial";
-  const lastUpdate = "10 de novembro de 2025 às 14:30";
+  const lastUpdate = formatInTimeZone(
+    new Date(),
+    "America/Sao_Paulo",
+    "d 'de' MMMM 'de' yyyy 'às' HH:mm",
+    { locale: ptBR }
+  );
 
   const updates = [
     {
@@ -67,8 +74,8 @@ const Index = () => {
           <p>
             Este site é independente e não tem afiliação oficial com os Correios.
           </p>
-           <p className="mt-2">
-            github.com/2jjj - Pedro Sakamoto
+          <p className="mt-2">
+            Informações atualizadas regularmente baseadas em fontes públicas.
           </p>
         </div>
       </footer>
